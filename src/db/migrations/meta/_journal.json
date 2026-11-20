@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1774597683757,
+      "tag": "0000_sticky_tombstone",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1774606379305,
+      "tag": "0001_loose_tag",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1774608302467,
+      "tag": "0002_redundant_stone_men",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1784813403635,
+      "tag": "0003_tricky_landau",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788673451403,
+      "tag": "0004_static_address_mode",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795007133601,
+      "tag": "0005_reserve_issued_hd_addresses",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1795083020205,
+      "tag": "0006_durable_payment_recovery",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1795083370018,
+      "tag": "0007_webhook_failure_recovery",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1795083429391,
+      "tag": "0008_reconcile_legacy_payment_facts",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1795137352199,
+      "tag": "0009_durable_native_funding",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1795137583322,
+      "tag": "0010_quarantine_legacy_native_funding",
+      "breakpoints": true
+    }
+  ]
+}

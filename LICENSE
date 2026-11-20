@@ -1,0 +1,35 @@
+Business Source License 1.1
+
+Licensor:             PayWarden Contributors
+Licensed Work:        PayWarden
+                      The Licensed Work is (c) 2024 PayWarden Contributors
+
+Additional Use Grant: You may use the Licensed Work for your own internal business
+                      purposes, including running a self-hosted instance for your
+                      own payment processing. You may NOT offer the Licensed Work
+                      as a hosted service to third parties.
+
+Change Date:          Four years from the date of each release tag.
+Change License:       Apache License, Version 2.0
+
+-----------------------------------------------------------------------------
+
+For information about alternative licensing arrangements for the Licensed Work,
+please open an issue on the project repository.
+
+-----------------------------------------------------------------------------
+
+Business Source License 1.1 — full license text:
+https://mariadb.com/bsl11/
+
+THE LICENSED WORK IS PROVIDED "AS IS". THE LICENSOR HEREBY DISCLAIMS ALL
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+IN NO EVENT WILL THE LICENSOR BE LIABLE TO ANY PARTY FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING
+FROM OR RELATED TO THIS LICENSE OR THE USE OF THE LICENSED WORK INCLUDING,
+WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, BUSINESS INTERRUPTION, LOSS
+OF TECHNICAL OR OTHER INFORMATION, LOSS OF PRIVACY, FAILURE TO MEET ANY DUTY
+INCLUDING OF GOOD FAITH OR OF REASONABLE CARE, NEGLIGENCE, AND ANY OTHER
+PECUNIARY OR OTHER LOSS WHATSOEVER, EVEN IF THE PARTY GRANTING THIS LICENSE
+HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS.

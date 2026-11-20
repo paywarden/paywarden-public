@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+!.env.production.example
+vault/
+vault-*/
+*.enc
+*.mnemonic
+*.log
+backups/
+test-reports/
+.DS_Store

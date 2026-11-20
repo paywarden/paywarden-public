@@ -1,0 +1,48 @@
+# PayWarden production reverse proxy — Caddy
+# Automatic HTTPS via Let's Encrypt. Zero-config cert renewal.
+#
+# Deployment topology:
+#   api.paywarden.io  → this Caddy container → app:3000
+#     /api/*       → JSON API
+#     /admin/*     → Admin dashboard SPA (served by app via @fastify/static)
+#     /checkout/*  → Checkout SPA (served by app via @fastify/static)
+#
+#   paywarden.io (marketing site) and docs.paywarden.io (VitePress)
+#   are NOT served by this Caddy — they live elsewhere (e.g., Cloudflare Pages).
+#
+# Before starting: set ACME_EMAIL in .env.production for Let's Encrypt contact.
+
+{
+	email {$ACME_EMAIL}
+	# Uncomment for staging certs during first-run testing to avoid rate limits:
+	# acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+}
+
+api.paywarden.io {
+	encode zstd gzip
+
+	# Security headers
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		# Remove Caddy's default Server header
+		-Server
+	}
+
+	# Reverse proxy everything to the Node app. The app already handles
+	# routing for /api, /admin, /checkout, static SPAs, and 404 fallback.
+	reverse_proxy app:3000 {
+		# Forward real client IP so Fastify's trustProxy + rate limit see it
+		header_up X-Real-IP {remote_host}
+		header_up X-Forwarded-For {remote_host}
+		header_up X-Forwarded-Proto {scheme}
+	}
+
+	# Structured access logs to stdout (picked up by docker logs)
+	log {
+		output stdout
+		format json
+	}
+}
